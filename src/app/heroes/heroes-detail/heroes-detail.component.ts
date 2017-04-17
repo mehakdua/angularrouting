@@ -10,6 +10,7 @@ export class HeroesDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("heroes detail")
   }
 
 }

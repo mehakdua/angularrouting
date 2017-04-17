@@ -10,6 +10,7 @@ export class CrisisDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  console.log("crisis detail")
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, Routes }  from '@angular/router';
+import {Router, Routes,RouterModule,ActivatedRoute} from "@angular/router";
 import { CrisisService } from './crisis.service';
 @Component({
   selector: 'app-crisis-list',
@@ -8,7 +8,7 @@ import { CrisisService } from './crisis.service';
 })
 export class CrisisListComponent implements OnInit {
 private items=[];
-  constructor(private cs:CrisisService) {
+  constructor(private cs:CrisisService,private router:Router,private route: ActivatedRoute) {
    this.items = this.cs.getCrisis();
    }
 
