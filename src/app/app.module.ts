@@ -9,16 +9,13 @@ import {HeroesModule} from './heroes/heroes.module';
 import {CrisisModule} from './crisis-center/crisis-center-module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ComposeMessageComponent } from './compose-message.component';
-import { AdminComponent } from './admin/admin.component';
-
-
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
-    ComposeMessageComponent,
-    AdminComponent
+    ComposeMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +23,8 @@ import { AdminComponent } from './admin/admin.component';
     HttpModule,
     AppRoutingModule,
     HeroesModule,
-    CrisisModule
+    CrisisModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
