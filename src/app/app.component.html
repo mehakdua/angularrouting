@@ -4,6 +4,7 @@
 <div>
 	<a routerLink = "/heroes" routerLinkActive = "active">Heroes</a>
 	<a routerLink = "/crisis-center" routerLinkActive = "active"> Crisis</a>
+	 <a routerLink="/admin" routerLinkActive="active">Admin</a>
 	<a [routerLink]="[{ outlets: { popup: ['compose']}}]">Contact</a>
 </div>
 <router-outlet></router-outlet>
