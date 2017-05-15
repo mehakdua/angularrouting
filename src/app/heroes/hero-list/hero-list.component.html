@@ -2,6 +2,6 @@
   hero-list works!
 </p>
 <ul>
-	<li *ngFor ="let hero of heroes">{{hero.name}}</li>
+	<li *ngFor ="let hero of heroes"  (click)="onSelect(hero)">{{hero.name}}</li>
 </ul>
 <button routerLink="/sidekicks">Go to sidekicks</button>

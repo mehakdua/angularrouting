@@ -1,16 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router ,ActivatedRoute} from '@angular/router';
+import { HeroesService } from '../heroes.service';
 @Component({
   selector: 'app-heroes-detail',
   templateUrl: './heroes-detail.component.html',
   styleUrls: ['./heroes-detail.component.css']
 })
 export class HeroesDetailComponent implements OnInit {
-
-  constructor() { }
-
+id:string;
+  constructor(public route:ActivatedRoute,public heroesService:HeroesService) { }
   ngOnInit() {
-    console.log("heroes detail")
+   		this.route.params.subscribe(params => {
+          this.id = params['id']; 
+        });
+      
   }
+	 canDeactivate(): Promise<boolean> | boolean {
+	  return this.dialogService.confirm('Discard changes?');
+	}
 
 }

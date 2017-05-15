@@ -4,7 +4,7 @@ export class Hero {
   constructor(public id: number, public name: string) { }
 }
 
-@Injectable()
+
 export class HeroesService {
   private heroes:Hero[]= [
 	  new Hero(11, 'Mr. Nice'),
