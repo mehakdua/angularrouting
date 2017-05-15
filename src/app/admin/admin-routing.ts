@@ -10,10 +10,10 @@ const adminRoutes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-    canActivate: [AuthGuard],
     children: [
       {
         path: '',
+        canActivateChild: [AuthGuard],
         children: [
           { path: 'crises', component: ManageCrisisComponent },
           { path: 'heroes', component: ManageHeroesComponent },

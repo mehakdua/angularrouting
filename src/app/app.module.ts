@@ -5,12 +5,14 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import {AppRoutingModule} from './app.routing';
 import { AppComponent } from './app.component';
+import { Router } from '@angular/router';
 import {HeroesModule} from './heroes/heroes.module';
 import {CrisisModule} from './crisis-center/crisis-center-module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ComposeMessageComponent } from './compose-message.component';
 import { AdminModule } from './admin/admin.module';
-import { LoginComponent } from './login.component';
+import { LoginModule }      from './login/login.routing';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,14 @@ import { LoginComponent } from './login.component';
     AppRoutingModule,
     HeroesModule,
     CrisisModule,
-    AdminModule
+    AdminModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+ constructor(router: Router) {
+    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  }
+}
