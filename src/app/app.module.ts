@@ -13,7 +13,7 @@ import { ComposeMessageComponent } from './compose-message.component';
 import { AdminModule } from './admin/admin.module';
 import { LoginModule }      from './login/login.routing';
 import { LoginComponent } from './login/login.component';
-
+import { CanDeactivateGuard }    from './deactivate-guard.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,7 @@ import { LoginComponent } from './login/login.component';
     AdminModule,
     LoginModule
   ],
-  providers: [],
+  providers: [CanDeactivateGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

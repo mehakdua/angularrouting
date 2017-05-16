@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router ,ActivatedRoute} from '@angular/router';
+import { Router ,ActivatedRoute,CanDeactivate} from '@angular/router';
 import { HeroesService } from '../heroes.service';
 @Component({
   selector: 'app-heroes-detail',
@@ -15,8 +15,4 @@ id:string;
         });
       
   }
-	 canDeactivate(): Promise<boolean> | boolean {
-	  return this.dialogService.confirm('Discard changes?');
-	}
-
 }
