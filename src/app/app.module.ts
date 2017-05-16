@@ -25,11 +25,12 @@ import { CanDeactivateGuard }    from './deactivate-guard.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
     HeroesModule,
     CrisisModule,
     AdminModule,
-    LoginModule
+    LoginModule,
+    AppRoutingModule
+
   ],
   providers: [CanDeactivateGuard],
   bootstrap: [AppComponent]
